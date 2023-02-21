@@ -1,0 +1,75 @@
+.item-container{
+    display: flex;
+    background-color: beige;
+    margin-right: 2%;
+    overflow: hidden;
+    margin-top: 1%;
+}
+
+.main-img{
+    height: 600px;
+    width: 700px;
+    margin-left: 7%;
+    background-color: beige;
+}
+
+.basket{
+    display: flex;
+    margin-left: 160%;
+}
+
+.basket img{
+    width: 50px;
+    height: 50px;
+}
+.basket input{
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.desc-name{
+    font-size: 30px;
+    margin-bottom: 10%;
+    width: 500px;
+    margin-top: 40%;
+    margin-left: 60%;
+}
+
+.desc-price{
+    font-size: 30px;
+    margin-bottom: 10%;
+    text-align: center;
+    margin-left: 90%;
+}
+
+.desc-but{
+    display: flex;
+    font-size: 30px;
+    gap:5%;
+    justify-content: center;
+    margin-left: 50%;
+    width: 500px;
+}
+
+.but{
+    height: 40px;
+    width: 40px;
+}
+
+.amount{
+    margin-top: 5px;
+}
+
+
+
+.basket input{
+    width: 50px;
+    height: 50px;
+    margin-top: 5%;
+}
+.name{
+    margin-top: 10%;
+    margin-right: 5%;
+}

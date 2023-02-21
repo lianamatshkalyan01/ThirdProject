@@ -1,0 +1,49 @@
+.prod-container{
+   
+    display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr); 
+  overflow: hidden;
+}
+
+.prods {
+    background-color: rgb(220, 218, 218);
+    margin: 10px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  }
+
+  .prods img{
+    height: 200px;
+    width: 200px;
+    margin-left: 30%;
+  }
+
+  .name{
+    font-size: 25px;
+    text-align: center;
+  }
+
+  .price{
+    font-size: 20px;
+    text-align: center;
+  }
+
+  input{
+    margin-left: 30%;
+    height: 40px;
+    width: 300px;
+    border: solid rgba(227, 186, 143, 1);
+  }
+
+  .search{
+    width: 100%;
+    background-color: rgba(227, 186, 143, 1);
+  }
+
+  p{
+    font-size: 25px;
+  }
+
+  .result{
+    height: 249px;
+  }

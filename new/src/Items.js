@@ -1,18 +1,23 @@
 import { useParams} from "react-router-dom"
 import "./item.css"
-import itemsData from "./itemsData"
-import { useRef, useState } from "react"
+import { useRef, useState, useEffect } from "react"
 import basketImg from "./bask.jpg"
 
 const Item = () =>{
+    const[chok, setChokData] = useState([])
     const[count, setCount] = useState("1")
     const{id} = useParams()
     const inputRef = useRef(null)
-    const item = itemsData.find((item)=> item.id === +id)
+    
+    useEffect(()=>{
+        fetch("http://localhost:3000/choc/"+id)
+        .then(res=>res.json())
+        .then(data=>setChokData(data))
+    },[])
     return (
         <div className="item-container">
             <div >
-            <img src={item.img} alt={item.name} className="main-img"/>
+            <img src={chok.image} alt={chok.name} className="main-img"/>
             </div>
             <div className=" desc">
                 <div className="basket">
@@ -20,10 +25,10 @@ const Item = () =>{
                 <input type="number" ref={inputRef}/>
                 </div>
             <div className="name">
-            <h2 className="desc-name"> {item.name}</h2>
+            <h2 className="desc-name"> {chok.name}</h2>
             </div>
             <div>
-            <p className="desc-price"> {count * item.price}</p>
+            <p className="desc-price"> {count * chok.price}</p>
             </div>
             <div className="desc-but">
                 <button className="but" onClick={() => {
